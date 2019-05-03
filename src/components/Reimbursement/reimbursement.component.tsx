@@ -15,10 +15,16 @@ export class ReimbursementComponent extends React.Component<any, IReimState> {
     };
   }
 
+
+
   // in here we should initialize http calls
   componentDidMount = async () => {
-    const resp = await fetch('http://localhost:8081/reim/author/userId/4');
+    const resp = await fetch('http://localhost:8081/reim/author/userId/5', {
+      credentials: 'include'
+    });
+  
     const body = await resp.json();
+   
     console.log(resp);
     this.setState({
       reim: body
@@ -29,8 +35,10 @@ export class ReimbursementComponent extends React.Component<any, IReimState> {
     return (
       <div className="container">
         <div className="row">
+        {/* <button onClick = {() => this.changeImage(-1)}> hello </button>
+        <button onClick={() => this.changeImage(1)}> > </button> // Right button */}
           {this.state.reim.map(reim => (
-            <ReimbursementCardComponent key={'reimbursement: ' +reim.reimbursementId} reimcard={reim}/>
+            <ReimbursementCardComponent key={'reimbursementlist: ' +reim.reimbursementlistid} reimcard={reim}/>
           ))}
         </div>
       </div>
