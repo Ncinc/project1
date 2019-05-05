@@ -74,7 +74,6 @@ export class PatchReimComponent extends React.Component<any, IUpdateReimState> {
     }
   }
 
-
   updateReimbursementlistid = (event) => {
     this.setState({
         reimbursementlistid: event.target.value
@@ -116,7 +115,6 @@ export class PatchReimComponent extends React.Component<any, IUpdateReimState> {
     });
   }
 
- 
   updateStatus = (event) => {
     this.setState({
         status: event.target.value

@@ -13,11 +13,14 @@ import { ChuckNorrisComponent } from './components/chuck-norris/chuck-norris.com
 import { NestedComponent } from './components/nested/nested.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { UserComponent } from './components/Users/user.component';
+// import {LookReimComponent} from
+
 import { SigninReimComponent } from './components/Reimbursement/signin-reimbursement.component';
 import { ReimbursementComponent } from './components/Reimbursement/reimbursement.component';
 import { PatchReimComponent } from './components/Reimbursement/PatchReim';
 import { ClickerComponent } from './components/clicker/clicker.component';
 import { SpaceshipsComponent } from './components/spaceships/spaceships.component';
+import { LookReimComponent } from './components/Reimbursement/lookup-reimburse.component';
 
 const App: React.FC = () => {
   return (
@@ -39,6 +42,7 @@ const App: React.FC = () => {
           <Route path="/sign-in" component={SignInComponent} />
           <Route path="/patch" component={PatchReimComponent} />
           <Route path="/getAllUsers" component={UserComponent} />
+          <Route path="/typereim" component={LookReimComponent}/>
           <Route path="/reimburseID" component={ReimbursementComponent} /> 
           <Route path="/spaceships" component={SpaceshipsComponent} />
           <Route path="/tic-tac-toe" component={TicTacComponent} />

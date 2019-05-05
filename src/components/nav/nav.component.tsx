@@ -36,6 +36,12 @@ export class NavComponent extends React.Component {
             </li>
 
             <li className="nav-item active">
+              <Link to="/typereim" className="unset-anchor nav-link">Lookup</Link>
+            </li>
+
+            
+
+            <li className="nav-item active">
               <Link to="/getAllUsers" className="unset-anchor nav-link">GetUsers</Link>
             </li>
 

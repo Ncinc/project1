@@ -1,14 +1,12 @@
 import React from 'react';
 import { Reimbursement } from '../../model/Reimbursement';
 
-
 interface IReimCardProps {
   reimcard: Reimbursement;
     index: number;
   imgArr:string [];
   currentImage: string;
 }
-
 
 export class ReimbursementCardComponent extends React.Component<any, IReimCardProps> {
 
@@ -23,7 +21,6 @@ export class ReimbursementCardComponent extends React.Component<any, IReimCardPr
         currentImage: 'https://metalsdiecast.com/wp-content/uploads/Metals-BvS-132-Batwing-02-1030x687.jpg' // From the list above
     };
   }
-
 
   changeImage = (increment: number) => {
     
@@ -46,11 +43,7 @@ export class ReimbursementCardComponent extends React.Component<any, IReimCardPr
       index: newIndex
     })
 
-    
    }
-
-
-
 
   render() {
     const reimcard = this.props.reimcard;
@@ -66,6 +59,10 @@ export class ReimbursementCardComponent extends React.Component<any, IReimCardPr
           <li className="list-group-item">Resolver: {reimcard.resolver}</li>
           <li className="list-group-item">Amount: {reimcard.amount}</li>
           <li className="list-group-item">Description: {reimcard.description}</li>
+          <li className="list-group-item">Date Submitted: {reimcard.date_submitted}</li>
+          <li className="list-group-item">Date Resolved: {reimcard.date_resolved}</li>
+          <li className="list-group-item">Type: {reimcard.type}</li>
+          <li className="list-group-item">Status: {reimcard.status}</li>
           <li className="list-group-item"> </li>
           <button onClick = {() => this.changeImage(1)}> {'>'} </button>
           <button onClick = {() => this.changeImage(-1)}> {'<'} </button>
