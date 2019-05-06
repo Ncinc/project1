@@ -42,7 +42,7 @@ export class SigninReimComponent extends React.Component<any, ISigninReimState> 
       } else if (resp.status === 200) {
         // redirect to spaceships page
         // const user = await resp.json();
-        this.props.history.push('/clicker');
+        this.props.history.push('/newreim');
       } else {
         this.setState({
           errorMessage: 'Cannot Login At This Time'

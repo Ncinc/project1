@@ -15,18 +15,24 @@ export class ReimbursementCardComponent extends React.Component<any, IReimCardPr
     this.state = {
        reimcard: new Reimbursement(),
         index: 0,
-        imgArr: ['https://metalsdiecast.com/wp-content/uploads/Metals-BvS-132-Batwing-02-1030x687.jpg','http://im.rediff.com/getahead/2018/jul/06kawasaki-ninja-h2.jpg', 
-        'https://i.pinimg.com/originals/93/3c/4f/933c4f1928549e2a23aa1ab6949cece0.jpg',
-      'https://i.ytimg.com/vi/_XxHi481qE8/maxresdefault.jpg'],
-        currentImage: 'https://metalsdiecast.com/wp-content/uploads/Metals-BvS-132-Batwing-02-1030x687.jpg' // From the list above
+      imgArr: ['https://metalsdiecast.com/wp-content/uploads/Metals-BvS-132-Batwing-02-1030x687.jpg',
+      'https://i.pinimg.com/originals/93/3c/4f/933c4f1928549e2a23aa1ab6949cece0.jpg' ,
+      'https://i.ytimg.com/vi/_XxHi481qE8/maxresdefault.jpg' ,
+      'http://im.rediff.com/getahead/2018/jul/06kawasaki-ninja-h2.jpg',
+      'https://static.turbosquid.com/Preview/2016/02/16__18_29_21/2.jpgf6dcb48b-98ca-46b2-868b-ac7b991ac85fOriginal.jpg',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJQyxV801XbYnZOCDX3D_IsFwS1hgdoS8-1o820cIcGu73-NTFNw'],
+      currentImage: 'https://metalsdiecast.com/wp-content/uploads/Metals-BvS-132-Batwing-02-1030x687.jpg'
     };
   }
+
+
+    
 
   changeImage = (increment: number) => {
     
     let newIndex = this.state.index + increment
    
-    if (newIndex > 3){
+    if (newIndex > 5){
       console.log(newIndex);
       newIndex = 0;
     }
@@ -37,6 +43,7 @@ export class ReimbursementCardComponent extends React.Component<any, IReimCardPr
     }
 
     const curImage = this.state.imgArr[newIndex]
+    console.log(this.state.imgArr[newIndex])
 
     this.setState({
       currentImage: curImage,
@@ -66,7 +73,7 @@ export class ReimbursementCardComponent extends React.Component<any, IReimCardPr
           <li className="list-group-item"> </li>
           <button onClick = {() => this.changeImage(1)}> {'>'} </button>
           <button onClick = {() => this.changeImage(-1)}> {'<'} </button>
-            <button className="btn btn-danger">Delete</button>
+            {/* <button className="btn btn-danger">Delete</button> */}
         </ul>
       </div>
     )

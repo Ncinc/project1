@@ -8,11 +8,12 @@ export class Reimbursement {
     resolver: number; // foreign key -> User
     status: number; // foreign ey -> ReimbursementStatus, not null
     type: number; // foreign key -> ReimbursementType
+    reimburseImage: string;
 
 
     constructor (reimbursementlistid = 0, author = 0, amount= 0,
         date_submitted= '', date_resolved= '', description = '',
-        resolver = 0, status = 0, type = 0) {
+        resolver = 0, status = 0, type = 0, reimburseImage = '') {
 
             this.reimbursementlistid = reimbursementlistid;
             this.author = author;
@@ -23,5 +24,6 @@ export class Reimbursement {
             this.resolver = resolver;
             this.status = status;
             this.type = type;
+            this.reimburseImage = reimburseImage;
     }
   }

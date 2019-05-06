@@ -16,50 +16,49 @@ export class NavComponent extends React.Component {
         </button>
         <div className="collapse navbar-collapse" id="navbarsExample04">
           <ul className="navbar-nav ml-auto margin-nav">
+           
             <li className="nav-item active">
+              <Link to="/sign-in-reimburse" className="unset-anchor nav-link">Sign In</Link>
+            </li>
+
+            {/* <li className="nav-item active">
               <Link to="/home" className="unset-anchor nav-link">Home</Link>
             </li>
-            <li className="nav-item active">
-              <Link to="/sign-in" className="unset-anchor nav-link">Sign In</Link>
-            </li>
-            <li className="nav-item active">
-              <Link to="/first" className="unset-anchor nav-link">First</Link>
-            </li>
-            <li className="nav-item active">
-              <Link to="/second" className="unset-anchor nav-link">Second</Link>
-            </li>
-            <li className="nav-item active">
-              <Link to="/clicker" className="unset-anchor nav-link">Clicker</Link>
-            </li>
-            <li className="nav-item active">
-              <Link to="/spaceships" className="unset-anchor nav-link">Spaceships</Link>
-            </li>
+            */}
 
             <li className="nav-item active">
               <Link to="/typereim" className="unset-anchor nav-link">Lookup</Link>
             </li>
 
-            
+            <li className="nav-item active">
+              <Link to="/newreim" className="unset-anchor nav-link">New Reimburse</Link>
+            </li>
 
             <li className="nav-item active">
               <Link to="/getAllUsers" className="unset-anchor nav-link">GetUsers</Link>
             </li>
 
             <li className="nav-item active">
-              <Link to="/sign-in-reimburse" className="unset-anchor nav-link">Reimburse</Link>
+              <Link to="/newuser" className="unset-anchor nav-link">New Users</Link>
             </li>
-
-            <li className="nav-item active">
+            
+            {/* <li className="nav-item active">
               <Link to="/reimburseID" className="unset-anchor nav-link">ReimburseID</Link>
-            </li>
+            </li> */}
 
             <li className="nav-item active">
               <Link to="/patch" className="unset-anchor nav-link">Patch</Link>
             </li>
 
-            
+            <li className="nav-item active">
+              <Link to="/clicker" className="unset-anchor nav-link">Clicker</Link>
+            </li> 
 
-            <li className="nav-item active dropdown">
+            {/* <li className="nav-item active">
+              <Link to="/chuck" className="unset-anchor nav-link">Chuck Jokes</Link>
+            </li> */}
+
+            {/* <li className="nav-item active dropdown">
               <div className="nav-link dropdown-toggle pointer" id="examples-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Examples</div>
               <div className="dropdown-menu" aria-labelledby="examples-dropdown">
                 <div className="dropdown-item"><Link to="/movies" className="unset-anchor nav-link active">Movies</Link></div>
@@ -71,7 +70,7 @@ export class NavComponent extends React.Component {
             </li>
             <li className="nav-item active">
               <Link to="/nested" className="unset-anchor nav-link">Nested</Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </nav>

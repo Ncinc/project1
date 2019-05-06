@@ -28,22 +28,6 @@ export class LookReimComponent extends React.Component<any, ILookReimState> {
     };
   }
 
-
-
-  
-  // updatePatch = async (event) => {
-  //   event.preventDefault();
-  //   console.log('attempting to patch');
-  //   const Updateinfo = {
-  //     reimbursementlistid:  this.state.reimbursementlistid,
-  //       author:  this.state.author,
-  //       date_resolved: this.state.date_resolved ,
-  //       resolver:  this.state.resolver,
-  //       status:  this.state.status,
-  //   };
-  // }
-
-
   submit = async (event) => {
     event.preventDefault();
     console.log('attempting to login');
@@ -91,7 +75,6 @@ export class LookReimComponent extends React.Component<any, ILookReimState> {
     }
   }
 
-
   updatePatch = async (event) => {
     event.preventDefault();
     console.log('attempting to patch');
@@ -119,7 +102,6 @@ export class LookReimComponent extends React.Component<any, ILookReimState> {
           errorMessage: 'Invalid Info'
         });
       } else if (resp2.status === 200) {
-        // redirect to spaceships page
         // const user = await resp.json();
         //this.props.history.push('/reimburseID');
       } else {
@@ -189,12 +171,12 @@ export class LookReimComponent extends React.Component<any, ILookReimState> {
       // fragment start
     <> 
       <form className="form-signin" onSubmit={this.submit}>
-      <h1 className="h3 mb-3 font-weight-normal">Lookup Arthur</h1>
+      <h1 className="h3 mb-3 font-weight-normal">Lookup Author</h1>
       <label htmlFor="inputUsername" className="sr-only">Username</label>
       <input type="text" id="inputUsername" name="username"
         className="form-control" placeholder="Username"
         required value={username} onChange={this.updateUsername} />
-      <button className="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      <button className="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
     </form>
 
           <div className="container">

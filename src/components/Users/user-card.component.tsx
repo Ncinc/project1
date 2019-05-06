@@ -10,9 +10,15 @@ export class UserCardComponent extends React.PureComponent<IUseCardProps> {
     const usercard = this.props.usercard;
     return (
       <div className="card col-md-4 col-sm-6 col-xs-12">
-        <img src= "https://pentagram-production.imgix.net/e5f48c9b-bd67-494d-9fd1-8adad56ac63f/emo_justiceleague_01.jpg?rect=0%2C0%2C3000%2C1872&w=880&fit=crop&fm=jpg&q=70&auto=format&h=548"
+         {/* <img src= "https://pentagram-production.imgix.net/e5f48c9b-bd67-494d-9fd1-8adad56ac63f/emo_justiceleague_01.jpg?rect=0%2C0%2C3000%2C1872&w=880&fit=crop&fm=jpg&q=70&auto=format&h=548"
           className="card-img-top"
-          alt="..." />
+          alt="..." /> */}
+
+          <img src= {usercard.profileImage}
+          className="card-img-top"
+          alt="..." />  
+
+{/* <img src= {usercard.profileImage} className = "img-fluid"/> */}
         <div className="card-body">
           <h5 className="card-title">User: {usercard.username}</h5>
         </div>
@@ -23,7 +29,7 @@ export class UserCardComponent extends React.PureComponent<IUseCardProps> {
           <li className="list-group-item">Email: {usercard.email}</li>
           <li className="list-group-item">Role: {usercard.user_role.role}</li>
           <li className="list-group-item">
-            <button className="btn btn-danger">Delete</button>
+            {/* <button className="btn btn-danger">Delete</button> */}
           </li>
         </ul>
       </div>
